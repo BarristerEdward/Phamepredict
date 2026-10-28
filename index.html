@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#061218">
+
+    <meta name="description"
+          content="Discover football predictions, match analysis and transparent results with PhamePredict.">
+
+    <title>PhamePredict — Football Predictions & Analysis</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- TOP NAVIGATION -->
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-ball">⚽</span>
+            Phame<span>Predict</span>
+        </a>
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input
+                type="search"
+                id="matchSearch"
+                placeholder="Search matches, teams or leagues..."
+                aria-label="Search matches, teams or leagues">
+        </div>
+
+        <div class="header-buttons">
+            <a href="register.html" class="btn btn-primary">Join Now</a>
+            <a href="login.html" class="btn btn-outline">Login</a>
+        </div>
+
+    </header>
+
+
+    <!-- DASHBOARD LAYOUT -->
+    <div class="layout">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+
+            <p class="sidebar-label">MENU</p>
+
+            <a href="index.html" class="side-link active">
+                <span>⌂</span> Home
+            </a>
+
+            <a href="predictions.html" class="side-link">
+                <span>◉</span> Predictions
+            </a>
+
+            <a href="leagues.html" class="side-link">
+                <span>♜</span> Leagues
+            </a>
+
+            <a href="results.html" class="side-link">
+                <span>▥</span> Results
+            </a>
+
+            <a href="about.html" class="side-link">
+                <span>ⓘ</span> About Us
+            </a>
+
+            <div class="sidebar-note">
+
+                <span class="crown">♛</span>
+
+                <h3>Better Insights.<br>Smarter Decisions.</h3>
+
+                <p>
+                    Football predictions supported by match analysis
+                    and transparent performance records.
+                </p>
+
+            </div>
+
+            <div class="sidebar-bottom">
+                <span class="status-dot"></span>
+                Football. Analysis. Transparency.
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- HERO BANNER -->
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        FOOTBALL PREDICTIONS & BETTING ANALYSIS
+                    </span>
+
+                    <h1>
+                        Smarter Football Predictions,
+                        <span>Better Decisions.</span>
+                    </h1>
+
+                    <p>
+                        Explore selected matches, understand the analysis
+                        behind predictions, and track results across
+                        your favourite football leagues.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#predictions"
+                           class="btn btn-primary hero-btn">
+                            Explore Predictions <span>→</span>
+                        </a>
+
+                        <a href="results.html"
+                           class="hero-secondary">
+                            View Results
+                        </a>
+
+                    </div>
+
+                    <div class="demo-notice">
+                        <span>●</span>
+                        PREVIEW MODE — Sample matches are for design demonstration.
+                    </div>
+
+                </div>
+
+
+                <div class="hero-features">
+
+                    <div class="feature">
+                        <span class="feature-icon">♜</span>
+
+                        <div>
+                            <h4>Top Leagues</h4>
+                            <p>Follow major competitions.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span class="feature-icon">▥</span>
+
+                        <div>
+                            <h4>Match Analysis</h4>
+                            <p>Explore the reasoning.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span class="feature-icon">✓</span>
+
+                        <div>
+                            <h4>Honest Results</h4>
+                            <p>Track wins and losses.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- QUICK OVERVIEW -->
+            <section class="overview-grid">
+
+                <article class="overview-card">
+                    <div class="overview-top">
+                        <span>COMPETITIONS</span>
+                        <span class="overview-icon">♜</span>
+                    </div>
+
+                    <h3>05</h3>
+                    <p>Featured leagues</p>
+                </article>
+
+                <article class="overview-card">
+                    <div class="overview-top">
+                        <span>OUR APPROACH</span>
+                        <span class="overview-icon">◈</span>
+                    </div>
+
+                    <h3>Analysis</h3>
+                    <p>Reasoned selections</p>
+                </article>
+
+                <article class="overview-card">
+                    <div class="overview-top">
+                        <span>TRACK RECORD</span>
+                        <span class="overview-icon">✓</span>
+                    </div>
+
+                    <h3>Transparent</h3>
+                    <p>Results tracked honestly</p>
+                </article>
+
+            </section>
+
+
+            <!-- MATCH PREDICTIONS -->
+            <section class="predictions-section" id="predictions">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-kicker">MATCH CENTRE</span>
+                        <h2>Featured Predictions</h2>
+
+                        <p>
+                            Selected fixtures and their featured markets.
+                        </p>
+                    </div>
+
+                    <a href="predictions.html" class="view-all">
+                        View All <span>→</span>
+                    </a>
+
+                </div>
+
+
+                <!-- LEAGUE FILTERS -->
+                <div class="league-filters" id="leagueFilters">
+
+                    <button
+                        type="button"
+                        class="league-filter active"
+                        data-league="all">
+                        All Leagues
+                    </button>
+
+                    <button
+                        type="button"
+                        class="league-filter"
+                        data-league="premier-league">
+                        Premier League
+                    </button>
+
+                    <button
+                        type="button"
+                        class="league-filter"
+                        data-league="la-liga">
+                        La Liga
+                    </button>
+
+                    <button
+                        type="button"
+                        class="league-filter"
+                        data-league="serie-a">
+                        Serie A
+                    </button>
+
+                    <button
+                        type="button"
+                        class="league-filter"
+                        data-league="bundesliga">
+                        Bundesliga
+                    </button>
+
+                    <button
+                        type="button"
+                        class="league-filter"
+                        data-league="ligue-1">
+                        Ligue 1
+                    </button>
+
+                </div>
+
+
+                <!-- MATCH GRID -->
+                <div class="match-grid" id="matchGrid">
+
+
+                    <!-- MATCH 1 -->
+                    <article class="match-card"
+                             data-league="premier-league">
+
+                        <div class="match-top">
+
+                            <span class="league-name">
+                                🏴 Premier League
+                            </span>
+
+                            <span class="demo-tag">DEMO</span>
+
+                        </div>
+
+                        <div class="match-date">
+                            Example fixture · Date not set
+                        </div>
+
+                        <div class="teams">
+
+                            <div class="team">
+                                <span class="team-icon">🔴</span>
+                                <strong>Arsenal</strong>
+                            </div>
+
+                            <span class="versus">VS</span>
+
+                            <div class="team">
+                                <span class="team-icon">🔵</span>
+                                <strong>Chelsea</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="prediction-box">
+
+                            <div>
+                                <small>FEATURED MARKET</small>
+                                <strong>Over 1.5 Goals</strong>
+                            </div>
+
+                            <span class="prediction-icon">↗</span>
+
+                        </div>
+
+                        <a href="match.html" class="analysis-link">
+                            Explore Analysis <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- MATCH 2 -->
+                    <article class="match-card"
+                             data-league="la-liga">
+
+                        <div class="match-top">
+
+                            <span class="league-name">🇪🇸 La Liga</span>
+
+                            <span class="demo-tag">DEMO</span>
+
+                        </div>
+
+                        <div class="match-date">
+                            Example fixture · Date not set
+                        </div>
+
+                        <div class="teams">
+
+                            <div class="team">
+                                <span class="team-icon">🔵</span>
+                                <strong>Barcelona</strong>
+                            </div>
+
+                            <span class="versus">VS</span>
+
+                            <div class="team">
+                                <span class="team-icon">⚪</span>
+                                <strong>Sevilla</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="prediction-box">
+
+                            <div>
+                                <small>FEATURED MARKET</small>
+                                <strong>Home Win</strong>
+                            </div>
+
+                            <span class="prediction-icon">↗</span>
+
+                        </div>
+
+                        <a href="match.html" class="analysis-link">
+                            Explore Analysis <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- MATCH 3 -->
+                    <article class="match-card"
+                             data-league="serie-a">
+
+                        <div class="match-top">
+
+                            <span class="league-name">🇮🇹 Serie A</span>
+
+                            <span class="demo-tag">DEMO</span>
+
+                        </div>
+
+                        <div class="match-date">
+                            Example fixture · Date not set
+                        </div>
+
+                        <div class="teams">
+
+                            <div class="team">
+                                <span class="team-icon">🔵</span>
+                                <strong>Inter</strong>
+                            </div>
+
+                            <span class="versus">VS</span>
+
+                            <div class="team">
+                                <span class="team-icon">🟠</span>
+                                <strong>Roma</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="prediction-box">
+
+                            <div>
+                                <small>FEATURED MARKET</small>
+                                <strong>Both Teams to Score</strong>
+                            </div>
+
+                            <span class="prediction-icon">↗</span>
+
+                        </div>
+
+                        <a href="match.html" class="analysis-link">
+                            Explore Analysis <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- MATCH 4 -->
+                    <article class="match-card"
+                             data-league="bundesliga">
+
+                        <div class="match-top">
+
+                            <span class="league-name">🇩🇪 Bundesliga</span>
+
+                            <span class="demo-tag">DEMO</span>
+
+                        </div>
+
+                        <div class="match-date">
+                            Example fixture · Date not set
+                        </div>
+
+                        <div class="teams">
+
+                            <div class="team">
+                                <span class="team-icon">🔴</span>
+                                <strong>Bayern</strong>
+                            </div>
+
+                            <span class="versus">VS</span>
+
+                            <div class="team">
+                                <span class="team-icon">🟡</span>
+                                <strong>Dortmund</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="prediction-box">
+
+                            <div>
+                                <small>FEATURED MARKET</small>
+                                <strong>Over 2.5 Goals</strong>
+                            </div>
+
+                            <span class="prediction-icon">↗</span>
+
+                        </div>
+
+                        <a href="match.html" class="analysis-link">
+                            Explore Analysis <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- MATCH 5 -->
+                    <article class="match-card"
+                             data-league="ligue-1">
+
+                        <div class="match-top">
+
+                            <span class="league-name">🇫🇷 Ligue 1</span>
+
+                            <span class="demo-tag">DEMO</span>
+
+                        </div>
+
+                        <div class="match-date">
+                            Example fixture · Date not set
+                        </div>
+
+                        <div class="teams">
+
+                            <div class="team">
+                                <span class="team-icon">🔵</span>
+                                <strong>PSG</strong>
+                            </div>
+
+                            <span class="versus">VS</span>
+
+                            <div class="team">
+                                <span class="team-icon">⚪</span>
+                                <strong>Marseille</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="prediction-box">
+
+                            <div>
+                                <small>FEATURED MARKET</small>
+                                <strong>Over 1.5 Goals</strong>
+                            </div>
+
+                            <span class="prediction-icon">↗</span>
+
+                        </div>
+
+                        <a href="match.html" class="analysis-link">
+                            Explore Analysis <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- MATCH 6 -->
+                    <article class="match-card"
+                             data-league="premier-league">
+
+                        <div class="match-top">
+
+                            <span class="league-name">
+                                🏴 Premier League
+                            </span>
+
+                            <span class="demo-tag">DEMO</span>
+
+                        </div>
+
+                        <div class="match-date">
+                            Example fixture · Date not set
+                        </div>
+
+                        <div class="teams">
+
+                            <div class="team">
+                                <span class="team-icon">🔴</span>
+                                <strong>Liverpool</strong>
+                            </div>
+
+                            <span class="versus">VS</span>
+
+                            <div class="team">
+                                <span class="team-icon">⚪</span>
+                                <strong>Tottenham</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="prediction-box">
+
+                            <div>
+                                <small>FEATURED MARKET</small>
+                                <strong>Over 1.5 Goals</strong>
+                            </div>
+
+                            <span class="prediction-icon">↗</span>
+
+                        </div>
+
+                        <a href="match.html" class="analysis-link">
+                            Explore Analysis <span>→</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <p class="empty-message" id="emptyMessage" hidden>
+                    No sample matches are available for this league.
+                </p>
+
+            </section>
+
+
+            <!-- LOWER DASHBOARD -->
+            <div class="bottom-grid">
+
+
+                <!-- RESULTS -->
+                <section class="results-panel" id="results">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-kicker">PERFORMANCE</span>
+                            <h2>Recent Results</h2>
+                        </div>
+
+                        <a href="results.html" class="view-all">
+                            View All →
+                        </a>
+
+                    </div>
+
+                    <div class="results-empty">
+
+                        <span class="results-empty-icon">▥</span>
+
+                        <h3>Your results will appear here</h3>
+
+                        <p>
+                            Predictions will be recorded before kick-off
+                            and updated after matches finish.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- WHY PHAMEPREDICT -->
+                <section class="why-panel">
+
+                    <span class="section-kicker">OUR APPROACH</span>
+
+                    <h2>Why PhamePredict?</h2>
+
+                    <div class="why-item">
+
+                        <span>◈</span>
+
+                        <div>
+                            <strong>Evidence-Based Analysis</strong>
+
+                            <p>
+                                Explore the reasoning behind each selection.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="why-item">
+
+                        <span>✓</span>
+
+                        <div>
+                            <strong>Transparent Records</strong>
+
+                            <p>
+                                Review wins, losses and void predictions.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="why-item">
+
+                        <span>▣</span>
+
+                        <div>
+                            <strong>Designed for Everyone</strong>
+
+                            <p>
+                                A straightforward experience on phones and PCs.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <a href="predictions.html"
+                       class="btn btn-primary full-width">
+                        Explore Predictions →
+                    </a>
+
+                </section>
+
+            </div>
+
+        </main>
+
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="right-sidebar">
+
+
+            <!-- LEAGUES -->
+            <section class="right-panel">
+
+                <div class="section-heading">
+
+                    <h2>Top Leagues</h2>
+
+                    <a href="leagues.html" class="view-all">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <a href="leagues.html" class="league-item">
+
+                    <span class="league-symbol">♛</span>
+
+                    <span>
+                        <strong>Premier League</strong>
+                        <small>England</small>
+                    </span>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+
+                <a href="leagues.html" class="league-item">
+
+                    <span class="league-symbol">⚽</span>
+
+                    <span>
+                        <strong>La Liga</strong>
+                        <small>Spain</small>
+                    </span>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+
+                <a href="leagues.html" class="league-item">
+
+                    <span class="league-symbol">⚽</span>
+
+                    <span>
+                        <strong>Serie A</strong>
+                        <small>Italy</small>
+                    </span>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+
+                <a href="leagues.html" class="league-item">
+
+                    <span class="league-symbol">⚽</span>
+
+                    <span>
+                        <strong>Bundesliga</strong>
+                        <small>Germany</small>
+                    </span>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+
+                <a href="leagues.html" class="league-item">
+
+                    <span class="league-symbol">⚽</span>
+
+                    <span>
+                        <strong>Ligue 1</strong>
+                        <small>France</small>
+                    </span>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+            </section>
+
+
+            <!-- FEATURED MATCH -->
+            <section class="right-panel featured-panel">
+
+                <span class="section-kicker">EDITOR'S PICK</span>
+
+                <h2>Featured Match</h2>
+
+                <p class="muted">
+                    Our featured match and analysis will appear here
+                    when real fixtures are added.
+                </p>
+
+                <a href="predictions.html"
+                   class="btn btn-primary full-width">
+                    Explore Matches →
+                </a>
+
+            </section>
+
+
+            <!-- ACCOUNT PROMPT -->
+            <section class="right-panel account-panel">
+
+                <span class="account-icon">♙</span>
+
+                <h2>Make It Yours</h2>
+
+                <p class="muted">
+                    Create an account to save favourite matches
+                    and access personalised features when available.
+                </p>
+
+                <a href="register.html"
+                   class="btn btn-outline full-width">
+                    Create Account
+                </a>
+
+            </section>
+
+
+            <!-- STATS -->
+            <section class="right-panel stats-panel">
+
+                <h2>Prediction Statistics</h2>
+
+                <p class="muted">
+                    No performance figures are displayed until actual
+                    predictions have been recorded and settled.
+                </p>
+
+                <a href="results.html" class="analysis-link">
+                    Explore Results →
+                </a>
+
+            </section>
+
+        </aside>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <a href="index.html" class="logo">
+            <span class="logo-ball">⚽</span>
+            Phame<span>Predict</span>
+        </a>
+
+        <p>
+            Football Predictions & Betting Analysis
+        </p>
+
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="results.html">Results</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </div>
+
+        <p class="disclaimer">
+            Football predictions are uncertain. No outcome is guaranteed.
+            Review the risks and bet responsibly, where legal.
+        </p>
+
+        <p class="copyright">
+            © 2026 PhamePredict. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- MOBILE BOTTOM NAVIGATION -->
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+
+        <a href="index.html" class="mobile-active">
+            <span>⌂</span>
+            Home
+        </a>
+
+        <a href="predictions.html">
+            <span>◉</span>
+            Predictions
+        </a>
+
+        <a href="leagues.html">
+            <span>♜</span>
+            Leagues
+        </a>
+
+        <a href="results.html">
+            <span>▥</span>
+            Results
+        </a>
+
+    </nav>
+
+</body>
+</html>
